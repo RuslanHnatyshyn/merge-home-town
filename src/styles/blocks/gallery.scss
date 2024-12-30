@@ -1,0 +1,31 @@
+.gallery {
+  background-color: #fcf6d5;
+  padding: 48px 16px;
+
+  &__title {
+    font-family: "Fredoka", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #804a38;
+  }
+}
+
+@media (min-width: 1025px) {
+  .gallery {
+    padding: 80px 0 80px 24px;
+
+    &__title {
+      font-size: 48px;
+      line-height: 72px;
+    }
+  }
+}
+
+@media (min-width: 1296px) {
+  .gallery {
+    padding: 80px 0 80px 72px;
+  }
+}

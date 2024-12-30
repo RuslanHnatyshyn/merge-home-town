@@ -1,0 +1,160 @@
+@use "./mixins.scss" as *;
+
+.advantages {
+  background-color: #fadcaa;
+  padding: 48px 16px;
+
+  &__title {
+    font-family: "Fredoka", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #804a38;
+  }
+
+  &__row-1 {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__card {
+    background: linear-gradient(180deg, #f8edc3 0%, #fbf3c8 100%);
+    border: 1px solid #d6b994;
+    border-radius: 24px;
+    padding: 25px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #242524;
+    max-width: 416px;
+    transition: transform 0.3s ease;
+
+    @include hover(transform, scale(1.1));
+
+    & img {
+      display: block;
+      margin: 0 auto;
+      width: 47px;
+    }
+
+    & h3 {
+      margin-top: 16px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+
+    & p {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  &__row-2 {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 112px;
+    transition: transform 0.3s ease;
+
+    @include hover(transform, scale(1.1));
+  }
+}
+
+@media (min-width: 900px) {
+  .advantages {
+    &__row-1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+    &__row-2 {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__card {
+      height: 240px;
+    }
+
+    &__img {
+      width: 184px;
+      margin-bottom: -10px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .advantages {
+    padding: 80px 0;
+
+    &__title {
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    &__row-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__row-2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 56px;
+    }
+
+    &__card {
+      width: 373px;
+      height: 278px;
+
+      & h3 {
+        font-size: 22px;
+        line-height: 36px;
+      }
+
+      & p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    &__img {
+      margin: 0 61px;
+    }
+  }
+}
+
+@media (min-width: 1296px) {
+  .advantages {
+    &__card {
+      width: 416px;
+      padding: 24px;
+
+      & img {
+        width: 129px;
+      }
+    }
+
+    &__img {
+      margin: 0 115px;
+    }
+  }
+}

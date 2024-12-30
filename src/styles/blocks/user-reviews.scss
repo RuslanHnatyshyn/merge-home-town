@@ -1,0 +1,159 @@
+@use "./mixins.scss" as *;
+
+.user-reviews {
+  background-color: #fbedc3;
+  padding: 48px 16px;
+
+  &__title {
+    font-family: "Fredoka", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #804a38;
+  }
+
+  &__row-1 {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__card {
+    background-color: #f8f2e6;
+    border: 1px solid #d6b994;
+    border-radius: 24px;
+    padding: 16px 24px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.01em;
+    text-align: left;
+    line-height: 24px;
+    max-width: 384px;
+    transition: transform 0.3s ease;
+
+    @include hover(transform, scale(1.1));
+
+    & p:first-child {
+      font-size: 16px;
+      font-weight: 400;
+      color: #242524;
+    }
+
+    & p:last-child {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+
+      & img {
+        width: 48px;
+      }
+    }
+  }
+
+  &__row-2 {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 111px;
+    transition: transform 0.3s ease;
+
+    @include hover(transform, scale(1.1));
+  }
+}
+
+@media (min-width: 900px) {
+  .user-reviews {
+    &__row-1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+    &__row-2 {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__card {
+      height: 180px;
+    }
+
+    &__img {
+      width: 185px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .user-reviews {
+    padding: 80px 0;
+
+    &__title {
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    &__row-1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__card {
+      width: 330px;
+      height: 202px;
+
+      & p:first-child {
+        line-height: 30px;
+      }
+
+      & p:last-child {
+        margin-top: 16px;
+        gap: 12px;
+        font-size: 16px;
+      }
+    }
+
+    &__row-2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 56px;
+    }
+
+    &__img {
+      width: 185px;
+      margin: 0 65px;
+    }
+  }
+}
+
+@media (min-width: 1296px) {
+  .user-reviews {
+    &__card {
+      padding: 24px 32px;
+      width: 384px;
+
+      & p:first-child {
+        font-size: 18px;
+      }
+    }
+
+    &__img {
+      margin: 0px 99px;
+    }
+  }
+}

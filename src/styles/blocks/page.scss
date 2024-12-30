@@ -1,0 +1,17 @@
+.page {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1296px;
+
+  @media (min-width: 1025px) {
+    padding-inline: 24px;
+  }
+
+  @media (min-width: 1296px) {
+    padding-inline: 0px;
+  }
+}

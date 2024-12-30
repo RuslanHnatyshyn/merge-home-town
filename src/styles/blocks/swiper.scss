@@ -1,0 +1,44 @@
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  margin: 40px 0 42px 0;
+  display: flex;
+  gap: 24px;
+}
+
+#slide {
+  width: 12.6rem;
+}
+
+.swiper-img {
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #804a38 !important;
+}
+
+@media (min-width: 1296px) {
+  .swiper-wrapper {
+    max-width: 1362px;
+    justify-self: center;
+  }
+
+  #slide {
+    width: 270px;
+    height: 480px;
+  }
+
+  #slide[data-slide="4"] {
+    width: 490px;
+  }
+
+  .swiper-img {
+    aspect-ratio: auto;
+  }
+}

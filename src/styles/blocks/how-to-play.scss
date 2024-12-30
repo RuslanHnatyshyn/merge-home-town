@@ -1,0 +1,179 @@
+@use "./mixins.scss" as *;
+
+.how-to-play {
+  background-color: #fcf6d5;
+  padding: 48px 16px;
+
+  &__title {
+    font-family: "Fredoka", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #804a38;
+  }
+
+  &__row-1 {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__img-wrapper {
+    max-width: 416px;
+    max-height: 265px;
+    transition: transform 0.3s ease;
+
+    @include hover(transform, scale(1.1));
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__card {
+    background: linear-gradient(180deg, #f8edc3 0%, #fbf3c8 100%);
+    border: 1px solid #d6b994;
+    border-radius: 24px;
+    font-family: " Poppins", sans-serif;
+    letter-spacing: 0.01em;
+    text-align: left;
+    padding: 16px 24px;
+    max-width: 416px;
+    max-height: 220px;
+    transition: transform 0.3s ease;
+
+    @include hover(transform, scale(1.1));
+
+    & h3 {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 600;
+      color: #804a38;
+    }
+
+    & p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #242524;
+
+      margin-top: 8px;
+    }
+  }
+
+  &__row-2 {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+@media (min-width: 900px) {
+  .how-to-play {
+    &__row-1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+    &__row-2 {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__img {
+      display: block;
+      height: 220px;
+      margin-top: -30px;
+    }
+
+    &__card {
+      height: 180px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .how-to-play {
+    padding: 80px 0;
+
+    &__title {
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    &__row-1 {
+      margin-top: 90px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__row-2 {
+      margin-top: 83px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__card {
+      width: 310px;
+      padding: 16px;
+
+      & h3 {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      & p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    &__img {
+      width: 310px;
+      height: 220px;
+    }
+  }
+}
+
+@media (min-width: 1296px) {
+  .how-to-play {
+    &__card {
+      width: 416px;
+      height: 220px;
+      padding: 24px 34px;
+
+      & h3 {
+        line-height: 36px;
+      }
+
+      & p {
+        margin-top: 16px;
+        font-size: 20px;
+      }
+    }
+
+    &__img-wrapper {
+      width: 416px;
+      height: 220px;
+      position: relative;
+    }
+
+    &__img {
+      width: 100%;
+      height: 265px;
+      position: absolute;
+      top: -15px;
+      // left: 0;
+      // right: 0;
+    }
+  }
+}
